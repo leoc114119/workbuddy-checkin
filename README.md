@@ -8,6 +8,18 @@ macOS / Linux / Windows 通用，**可以直接分享给别人用** —— 别�
 
 ## 一、给别人安装（4 步）
 
+### 方式 A：从 GitHub 装（推荐，一步）
+
+在 WorkBuddy 里打开 **设置 → 插件 → 添加市场**，粘贴：
+
+```
+leoc114119/workbuddy-checkin
+```
+
+然后在插件列表里启用「workbuddy-checkin」即可。**不需要下载任何文件。**
+
+### 方式 B：本地目录装（离线 / 自己改）
+
 ```bash
 # 1) 把整个 workbuddy-checkin/ 目录放到插件市场目录下
 #    ~/.workbuddy/plugins/marketplaces/workbuddy-checkin/
@@ -17,19 +29,23 @@ python3 ~/.workbuddy/plugins/marketplaces/workbuddy-checkin/plugins/workbuddy-ch
 python3 ~/.workbuddy/plugins/marketplaces/workbuddy-checkin/plugins/workbuddy-checkin/scripts/install_plugin.py --install
 
 # 3) 重启 WorkBuddy，在插件列表里启用「workbuddy-checkin」
-
-# 4) 想每天 8 点自动签到，装系统定时器
-python3 .../scripts/install_schedule.py            # 预演
-python3 .../scripts/install_schedule.py --install  # 安装（默认 08:00）
 ```
 
-先自检，确认能读到他自己的账号：
+### 装完都建议跑一次
 
 ```bash
+# 想每天 8 点自动签到，装系统定时器
+python3 .../scripts/install_schedule.py            # 预演
+python3 .../scripts/install_schedule.py --install  # 安装（默认 08:00）
+
+# 先自检，确认能读到他自己的账号
 python3 .../scripts/wb_checkin.py selftest
 ```
 
 **不需要任何配置**：登录态路径、解密密钥、API 域名全部自动发现。
+
+> 本仓库同时是一个可直接安装的插件市场（`owner/repo`）。
+> 发布方式见 §9。
 
 ---
 
@@ -184,10 +200,12 @@ $PY $DIR/wb_checkin.py accounts   # 列账号与推导出的 host
 
 ## 九、发布给别人（插件市场）
 
-**自己的市场**（推荐，官方支持、不需要任何人审核）：把本目录原样推到一个
-GitHub 仓库即可 —— `.codebuddy-plugin/marketplace.json` 在仓库根、
-插件在 `plugins/<名字>/`，这就是官方市场的目录约定。别人在
-**设置 → 插件 → 添加市场**里粘贴来源就能装：
+**自己的市场**（推荐，官方支持、不需要任何人审核）：本插件**已发布**在
+
+> **https://github.com/leoc114119/workbuddy-checkin**
+
+这正是 `.codebuddy-plugin/marketplace.json` 在仓库根、插件在 `plugins/<名字>/`
+的官方目录约定。别人在 **设置 → 插件 → 添加市场** 里粘贴来源就能装：
 
 | 来源写法 | 例子 |
 |---|---|
