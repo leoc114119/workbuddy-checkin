@@ -1,0 +1,21 @@
+{
+  "name": "workbuddy-checkin",
+  "description": "WorkBuddy 本地插件市场：每日积分签到。解析本机登录态（纯 Python 解密，零依赖），查询当天签到状态并领取每日 100 积分。跨 macOS/Linux/Windows，读的是使用者本人的账号，无需配置。",
+  "owner": {
+    "name": "leochen"
+  },
+  "plugins": [
+    {
+      "name": "workbuddy-checkin",
+      "description": "WorkBuddy 每日积分签到。查状态 / 未签到则自动领取（每天 100 积分）。纯标准库、零依赖、跨平台，自动读取使用者本人的登录态。支持每天 8 点定时自动签到。",
+      "description_en": "Daily credit check-in for WorkBuddy. Check status and claim the daily 100 credits. Pure standard library, zero dependencies, cross-platform, reads the current user's own session.",
+      "version": "1.2.0",
+      "source": "./plugins/workbuddy-checkin",
+      "category": "productivity",
+      "author": {
+        "name": "leochen"
+      },
+      "license": "MIT"
+    }
+  ]
+}

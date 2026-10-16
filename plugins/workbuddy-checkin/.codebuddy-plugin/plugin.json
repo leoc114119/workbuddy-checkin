@@ -1,0 +1,19 @@
+{
+  "name": "workbuddy-checkin",
+  "version": "1.2.0",
+  "description": "WorkBuddy 每日积分签到插件。自动读取本机登录态并查询/领取每日 100 积分，支持多账号；对称(sym-v1)与非对称(asym-v1)两种加密信封均可解密。",
+  "description_en": "Daily credit check-in plugin for WorkBuddy. Reads the local session, checks in and claims the daily 100 credits. Multi-account aware; decrypts both sym-v1 and asym-v1 envelopes.",
+  "author": {
+    "name": "leochen"
+  },
+  "license": "MIT",
+  "keywords": [
+    "workbuddy",
+    "checkin",
+    "签到",
+    "积分",
+    "credits",
+    "daily"
+  ],
+  "category": "productivity"
+}
